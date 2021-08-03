@@ -34,7 +34,6 @@ class DetailWebScreen extends StatefulWidget {
 }
 
 class _DetailWebScreen extends State<DetailWebScreen> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -98,16 +97,19 @@ class _DetailWebScreen extends State<DetailWebScreen> {
                                       padding: const EdgeInsets.all(16.0),
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(10),
-                                        child: Image.network(widget.data.poster_path,
-                                            width: 100, height: 150),
+                                        child: Image.network(
+                                            widget.data.poster_path,
+                                            width: 100,
+                                            height: 150),
                                       ),
                                     ),
                                   ),
                                   Expanded(
                                     child: Padding(
-                                      padding: const EdgeInsets.only(top:16.0),
+                                      padding: const EdgeInsets.only(top: 16.0),
                                       child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         mainAxisSize: MainAxisSize.min,
                                         children: <Widget>[
                                           Container(
@@ -116,10 +118,12 @@ class _DetailWebScreen extends State<DetailWebScreen> {
                                                 Text(
                                                   widget.data.vote_average,
                                                   style: TextStyle(
-                                                      fontSize: 14.0, color: Colors.grey),
+                                                      fontSize: 14.0,
+                                                      color: Colors.grey),
                                                 ),
                                                 Icon(Icons.favorite,
-                                                    size: 14, color: Colors.redAccent),
+                                                    size: 14,
+                                                    color: Colors.redAccent),
                                               ],
                                             ),
                                           ),
@@ -130,7 +134,8 @@ class _DetailWebScreen extends State<DetailWebScreen> {
                                           Text(
                                             widget.data.release_date,
                                             style: TextStyle(
-                                                fontSize: 12.0, fontWeight: FontWeight.bold),
+                                                fontSize: 12.0,
+                                                fontWeight: FontWeight.bold),
                                           ),
                                         ],
                                       ),
@@ -145,13 +150,15 @@ class _DetailWebScreen extends State<DetailWebScreen> {
                                     child: Padding(
                                       padding: const EdgeInsets.all(16.0),
                                       child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         mainAxisSize: MainAxisSize.min,
                                         children: <Widget>[
                                           Text(
                                             'Detail',
                                             style: TextStyle(
-                                                fontSize: 18.0, fontWeight: FontWeight.bold),
+                                                fontSize: 18.0,
+                                                fontWeight: FontWeight.bold),
                                           ),
                                           SizedBox(
                                             height: 15,
@@ -168,7 +175,8 @@ class _DetailWebScreen extends State<DetailWebScreen> {
                                           Text(
                                             'Vote Count',
                                             style: TextStyle(
-                                                fontSize: 18.0, fontWeight: FontWeight.bold),
+                                                fontSize: 18.0,
+                                                fontWeight: FontWeight.bold),
                                           ),
                                           SizedBox(
                                             height: 15,
@@ -180,9 +188,12 @@ class _DetailWebScreen extends State<DetailWebScreen> {
                                                 Text(
                                                   widget.data.vote_count,
                                                   style: TextStyle(
-                                                      fontSize: 14.0, color: Colors.grey),
+                                                      fontSize: 14.0,
+                                                      color: Colors.grey),
                                                 ),
-                                                Icon(Icons.people, size: 14, color: Colors.red),
+                                                Icon(Icons.people,
+                                                    size: 14,
+                                                    color: Colors.red),
                                               ],
                                             ),
                                           ),

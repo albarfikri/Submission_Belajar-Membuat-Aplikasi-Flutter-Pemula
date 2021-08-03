@@ -10,10 +10,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Movie Catalogue',
       theme: ThemeData(
-        fontFamily: 'Roboto',
-        primarySwatch: Colors.amber,
-        visualDensity:VisualDensity.adaptivePlatformDensity
-      ),
+          fontFamily: 'Roboto',
+          primarySwatch: Colors.amber,
+          visualDensity: VisualDensity.adaptivePlatformDensity),
       home: LandingScreen(),
       debugShowCheckedModeBanner: false,
     );
