@@ -24,16 +24,11 @@ class DetailMovieScreen extends StatelessWidget {
   }
 }
 
-class DetailWebScreen extends StatefulWidget {
+class DetailWebScreen extends StatelessWidget {
   final Movie data;
 
   DetailWebScreen({required this.data});
 
-  @override
-  _DetailWebScreen createState() => _DetailWebScreen();
-}
-
-class _DetailWebScreen extends State<DetailWebScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,7 +59,7 @@ class _DetailWebScreen extends State<DetailWebScreen> {
                         children: [
                           ClipRRect(
                             borderRadius: BorderRadius.circular(10),
-                            child: Image.network(widget.data.backdrop_path),
+                            child: Image.network(data.backdrop_path),
                           ),
                           SizedBox(height: 16),
                         ],
@@ -80,7 +75,7 @@ class _DetailWebScreen extends State<DetailWebScreen> {
                             children: <Widget>[
                               Container(
                                 child: Text(
-                                  widget.data.original_title,
+                                  data.original_title,
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     fontSize: 30.0,
@@ -97,10 +92,8 @@ class _DetailWebScreen extends State<DetailWebScreen> {
                                       padding: const EdgeInsets.all(16.0),
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(10),
-                                        child: Image.network(
-                                            widget.data.poster_path,
-                                            width: 100,
-                                            height: 150),
+                                        child: Image.network(data.poster_path,
+                                            width: 100, height: 150),
                                       ),
                                     ),
                                   ),
@@ -116,7 +109,7 @@ class _DetailWebScreen extends State<DetailWebScreen> {
                                             child: Row(
                                               children: <Widget>[
                                                 Text(
-                                                  widget.data.vote_average,
+                                                  data.vote_average,
                                                   style: TextStyle(
                                                       fontSize: 14.0,
                                                       color: Colors.grey),
@@ -132,7 +125,7 @@ class _DetailWebScreen extends State<DetailWebScreen> {
                                             width: 10,
                                           ),
                                           Text(
-                                            widget.data.release_date,
+                                            data.release_date,
                                             style: TextStyle(
                                                 fontSize: 12.0,
                                                 fontWeight: FontWeight.bold),
@@ -165,7 +158,7 @@ class _DetailWebScreen extends State<DetailWebScreen> {
                                             width: 10,
                                           ),
                                           Text(
-                                            widget.data.overview,
+                                            data.overview,
                                             style: TextStyle(fontSize: 12.0),
                                           ),
                                           SizedBox(
@@ -186,7 +179,7 @@ class _DetailWebScreen extends State<DetailWebScreen> {
                                             child: Row(
                                               children: <Widget>[
                                                 Text(
-                                                  widget.data.vote_count,
+                                                  data.vote_count,
                                                   style: TextStyle(
                                                       fontSize: 14.0,
                                                       color: Colors.grey),
